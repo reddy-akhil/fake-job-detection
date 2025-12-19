@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Job Posting Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">FAKE JOB POSTING DETECTION</h1>
+
+    <p class="info">
+        This system uses <b>Machine Learning</b> and <b>NLP</b> to detect
+        whether a job posting is <span class="fake">Fake</span> or
+        <span class="real">Authentic</span>.
+    </p>
+
+    <form method="POST">
+        <textarea name="job_text" placeholder="Paste job description here..." required></textarea>
+        <br>
+        <button type="submit">CHECK JOB</button>
+    </form>
+
+    {% if result %}
+        <h2 style="color: {{ color }};">{{ result }}</h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
